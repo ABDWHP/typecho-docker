@@ -60,3 +60,7 @@ rm -rf typecho-sitemap
 wget  https://www.yzmb.me/download/2253 -O TeStore.zip
 unzip TeStore.zip
 rm -f TeStore.zip
+
+php-fpm&
+
+nginx
