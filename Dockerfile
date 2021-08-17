@@ -8,9 +8,7 @@ RUN apk --update --no-cache add nginx git unzip wget curl-dev libcurl && \
   wget http://typecho.org/build.tar.gz -O typecho.tgz && \
   tar zxvf typecho.tgz && \
   mv build/* /var/www && \
-  rm -f typecho.tgz  \
-  chown -R www-data:www-data /var/www
-
+  rm -f typecho.tgz  
 
 COPY plugins.sh /plugins.sh
 
