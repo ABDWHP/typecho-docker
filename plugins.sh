@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-cd /var/www/html/typecho/usr/plugins
+cd /var/www/usr/plugins
 
 # GistEcho plugins
 
@@ -38,9 +38,9 @@ mv typecho-sitemap/Sitemap .
 rm -rf typecho-sitemap
 
 # CDN switch
-wget https://publish.indexyz.me/files/CDNSwitch.zip
-unzip CDNSwitch.zip
-rm -f CDNSwitch.zip
+# wget https://publish.indexyz.me/files/CDNSwitch.zip
+# unzip CDNSwitch.zip
+# rm -f CDNSwitch.zip
 
 wget  https://www.yzmb.me/download/2253
 unzip 1226007143.zip
