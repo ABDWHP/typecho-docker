@@ -1,4 +1,4 @@
-FROM php:fpm-alpine    
+FROM php:7.2.10-fpm-alpine3.8    
 LABEL maintainer="i@indexyz.me"
 
 COPY code.sh /code.sh
