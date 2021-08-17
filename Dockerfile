@@ -1,4 +1,4 @@
-FROM php:fpm-alpine    
+FROM php:7.2.10-fpm-alpine3.8   
 LABEL maintainer="i@indexyz.me"
 
 # remove pdo,mbstring
@@ -19,7 +19,5 @@ COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
 COPY config/nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 80  
 
 ENTRYPOINT [ "sh", "/run.sh" ]
