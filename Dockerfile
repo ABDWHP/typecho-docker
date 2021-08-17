@@ -18,8 +18,8 @@ RUN apk --update --no-cache add nginx unzip wget curl-dev libcurl git && \
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
-COPY config/nginx.conf /etc/nginx/nginx.conf
+# COPY config/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80  
 
-# ENTRYPOINT [ "sh", "/run.sh" ]
+ENTRYPOINT [ "sh", "/run.sh" ]
