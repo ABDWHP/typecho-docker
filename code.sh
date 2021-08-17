@@ -61,6 +61,8 @@ wget  https://www.yzmb.me/download/2253 -O TeStore.zip
 unzip TeStore.zip
 rm -f TeStore.zip
 
+chown -R www-data:www-data /var/www/html 
+
 php-fpm&
 
 nginx
