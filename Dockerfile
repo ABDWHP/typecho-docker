@@ -1,25 +1,13 @@
-FROM php:7.2.10-fpm-alpine3.8   
+FROM php:fpm-alpine    
 LABEL maintainer="i@indexyz.me"
+
+COPY run.sh /run.sh
 
 # remove pdo,mbstring
 RUN apk --update --no-cache add nginx git unzip wget curl-dev libcurl && \
-  docker-php-ext-install  pdo_mysql mbstring bcmath curl && \
-  mkdir -p /var/www/html/typecho && \
-  wget http://typecho.org/build.tar.gz -O typecho.tgz && \
-  tar zxvf typecho.tgz && \
-  mv build/* /var/www/html/typecho && \
-  rm -f typecho.tgz  
+  docker-php-ext-install  pdo_mysql bcmath &&          \
 
-
-COPY plugins.sh /plugins.sh 
-RUN chmod +x /plugins.sh && \
-  sh /plugins.sh
-
-COPY run.sh /run.sh
-RUN chmod +x /run.sh
-
-EXPOSE 80  
-
-RUN  chown -R www-data:www-data /var/www/html
+  chmod +x /run.sh         \
+  chown -R www-data:www-data /var/www/html 
 
 ENTRYPOINT [ "sh", "/run.sh" ]

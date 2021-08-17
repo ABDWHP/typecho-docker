@@ -7,7 +7,8 @@ services:
       dockerfile: Dockerfile
     volumes: 
       - ./config/nginx.conf:/etc/nginx/nginx.conf
-      - ./config/conf.d:/var/www/docker/nginx/conf.d
+      - ./config/conf.d:/etc/nginx/conf.d
+      - ./typecho:/var/www/html/typecho
     ports:
       - "80:80"
     container_name: typecho
@@ -16,3 +17,4 @@ services:
       - default
     stdin_open: true
     tty: true
+    entrypoint: ./code.sh
