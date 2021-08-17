@@ -2,7 +2,6 @@
 set -e
 
 cd /var/www/usr/plugins
-
 # GistEcho plugins
 
 mkdir -p GistEcho 

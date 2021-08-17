@@ -12,7 +12,8 @@ RUN apk --update --no-cache add nginx git unzip wget curl-dev libcurl && \
   chown -R www-data:www-data /var/www
 
 
-COPY plugins.sh /plugins.sh 
+COPY plugins.sh /plugins.sh
+
 RUN chmod +x /plugins.sh && \
   sh /plugins.sh
 
@@ -20,7 +21,5 @@ COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
 COPY config/nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 80  
 
 ENTRYPOINT [ "sh", "/run.sh" ]
