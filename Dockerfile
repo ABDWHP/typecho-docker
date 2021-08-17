@@ -11,9 +11,9 @@ RUN apk --update --no-cache add nginx unzip wget curl-dev libcurl git && \
   rm -f typecho.tgz \
   chown -R www-data:www-data /var/www
 
-COPY plugins.sh /plugins.sh 
-RUN chmod +x /plugins.sh && \
-  sh /plugins.sh
+# COPY plugins.sh /plugins.sh 
+# RUN chmod +x /plugins.sh && \
+#   sh /plugins.sh
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
