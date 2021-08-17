@@ -5,7 +5,7 @@ COPY plugins.sh /plugins.sh
 COPY run.sh /run.sh
 
 RUN apk --update --no-cache add nginx unzip wget curl-dev libcurl git && \
-  docker-php-ext-install pdo pdo_mysql mbstring bcmath curl && \
+  docker-php-ext-install pdo pdo_mysql bcmath curl && \
   mkdir -p /var/www/html/typecho && \
   wget http://typecho.org/build.tar.gz -O typecho.tgz && \
   tar zxvf typecho.tgz && \
