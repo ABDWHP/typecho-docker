@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-cd /var/www/html/typecho/usr/plugins
+cd /var/www/usr/plugins
 # GistEcho plugins
 
 mkdir -p GistEcho 
