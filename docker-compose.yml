@@ -5,9 +5,6 @@ services:
     build: 
       context: ./
       dockerfile: Dockerfile
-    volumes: 
-      - /var/www/docker/nginx:/etc/nginx
-      - /var/www/html:/var/www/html
     ports:
       - "80:80"
     container_name: typecho
