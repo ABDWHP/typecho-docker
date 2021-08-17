@@ -41,6 +41,6 @@ rm -rf typecho-sitemap
 # unzip CDNSwitch.zip
 # rm -f CDNSwitch.zip
 
-wget  https://www.yzmb.me/download/2253 -O yzmb.zip
-unzip yzmb.zip
-rm -f yzmb.zip
+wget  https://www.yzmb.me/download/2253 -O TeStore.zip
+unzip TeStore.zip
+rm -f TeStore.zip
