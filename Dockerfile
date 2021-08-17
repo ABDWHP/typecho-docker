@@ -22,4 +22,4 @@ COPY config/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80  
 
-ENTRYPOINT [ "sh", "/run.sh" ]
+# ENTRYPOINT [ "sh", "/run.sh" ]
