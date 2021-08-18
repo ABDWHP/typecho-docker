@@ -9,9 +9,8 @@ Typecho 是一个轻量级的 php 博客系统，就像 wordpress 一样，具�
 ## docker
 
 ```bash
-
-docker run -d -p 80:80 cikiche/typecho-docker:stable
-
+docker build -t typecho-docker .
+docker run -d -p 80:80 typecho-docker
 ```
 
 ## docker-compose 
