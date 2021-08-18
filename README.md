@@ -6,19 +6,19 @@ Typecho 是一个轻量级的 php 博客系统，就像 wordpress 一样，具�
 
 # Quick start
 
-## docker
+## 方式1 docker
 
 ```bash
 docker build -t typecho-docker .
 docker run -d -p 80:80 typecho-docker
 ```
 
-## docker-compose 
+## 方式2 docker-compose 
 
 ```bash
 docker-compose up -d
 ```
-
+以上两种方式任选其一
 
 
 # 特色
