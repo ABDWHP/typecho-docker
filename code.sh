@@ -1,9 +1,5 @@
 #!/bin/sh
 set -e
-
-php-fpm&
-
-nginx
 # if command -v wget >/dev/null 2>&1; then 
 # else 
 #   yum install wget  -y
@@ -65,3 +61,8 @@ unzip TeStore.zip
 rm -f TeStore.zip
 
 chown -R www-data:www-data /var/www/html 
+
+
+php-fpm&
+
+nginx
